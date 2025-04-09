@@ -1,5 +1,16 @@
+<html>
+  <head>
+    <title>My Page Title</title>
+    <script>
+    function myFunction(myString) {
+      console.log(myString);
+    }
+    </script>
+</head>
+<body>
 <h1>This is my home page's title</h1>
-<p>Some paragraph</p>
+
+<p id="demo">Some paragraph</p>
 
 <input type="button" id="input_button" value="my_value" text="my text" />
 
@@ -8,9 +19,5 @@
 <button onclick="javascript:myFunction('Simple Click Button')">Click me Please Now</button>
 
 <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
-
-<script>
-function myFunction(myString) {
-  console.log(myString);
-}
-</script>
+</body>
+</html>
