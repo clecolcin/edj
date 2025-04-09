@@ -7,7 +7,7 @@
       EDJAndroid.showToast(myString)
     }
       
-    function setToken(myString) {
+    function storeToken(myString) {
       console.log(myString);
       EDJAndroid.setToken(myString)
     }  
@@ -22,13 +22,11 @@
 <h3>Android Webview Interface test harness</h3>
 
 <p id="demo">Choose your action:</p>
-<input type="button" id="input_button" value="my_value" text="Show Toast button" onClick="javascript:showToast('Simple Click Button')" />
+<input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
 <br /><br />
-<button id="some_button" onClick="javascript:setToken('Set Token')">Set Token button</button>
+<button onClick="javascript:storeToken('Set Token button click')">Set Token button</button>
 <br /><br />
-<button onClick="javascript:retrieveToken('Simple Click Button')">Click me Please Now</button>
-<br /><br />
-<button type="button" onClick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+<button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
 <br /><br />
 </body>
 </html>
