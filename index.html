@@ -9,7 +9,7 @@
       
     function storeToken(myString) {
       console.log(myString);
-      EDJAndroid.setToken(myString)
+      EDJAndroid.storeToken(myString)
     }  
       
     function retrieveToken(myString) {
@@ -19,12 +19,12 @@
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness</h3>
+<h2>Android Webview Interface test harness</h2>
 
 <p id="demo">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
 <br /><br />
-<button onClick="javascript:storeToken('Set Token button click')">Set Token button</button>
+<button onClick="javascript:storeToken('Store Token button click')">Set Token button</button>
 <br /><br />
 <button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
 <br /><br />
