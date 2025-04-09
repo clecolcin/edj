@@ -2,24 +2,34 @@
   <head>
     <title>My Page Title</title>
     <script>
-    function myFunction(myString) {
+    function showToast(myString) {
       console.log(myString);
-
       EDJAndroid.showToast(myString)
     }
+      
+    function setToken(myString) {
+      console.log(myString);
+      EDJAndroid.setToken(myString)
+    }  
+      
+    function retrieveToken(myString) {
+      console.log(myString);
+      EDJAndroid.retrieveToken(myString)
+    }      
     </script>
 </head>
 <body>
-<h1>This is my home page's title</h1>
+<h3>Android Webview Interface test harness</h3>
 
-<p id="demo">Some paragraph</p>
-
-<input type="button" id="input_button" value="my_value" text="my text" />
-
-<button id=some_button>Some button</button>
-
-<button onclick="javascript:myFunction('Simple Click Button')">Click me Please Now</button>
-
-<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+<p id="demo">Choose your action:</p>
+<br /><br />
+<input type="button" id="input_button" value="my_value" text="Show Toast button" onClick="javascript:showToast('Simple Click Button')" />
+<br /><br />
+<button id="some_button" onClick="javascript:setToken('Set Token')">Set Token button</button>
+<br /><br />
+<button onClick="javascript:retrieveToken('Simple Click Button')">Click me Please Now</button>
+<br /><br />
+<button type="button" onClick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+<br /><br />
 </body>
 </html>
