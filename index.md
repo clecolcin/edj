@@ -4,3 +4,12 @@
 <input type="button" id="input_button" value="my_value" text="my text" />
 
 <button id=some_button>Some button</button>
+
+<button onclick="log('Simple Click Button')">Click me!</button>
+
+
+<script type="javascript>
+function log(input) {
+  console.log('input Clicked');
+};
+  </script>
