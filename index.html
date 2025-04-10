@@ -18,21 +18,24 @@
     }    
 
     function retrieveToken(myString) {
-      console.log(myString + "calling native");
+      console.log(myString + "calling native...");
       val retValue = EDJAndroid.performNativeAction(myString)
-      
+      document.getElementById('demo').innerHTML = retValue
     }      
     </script>
 </head>
 <body>
 <h2>Android Webview Interface test harness</h2>
 
-<p id="demo">Choose your action:</p>
+<p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
 <br /><br />
 <button onClick="javascript:storeToken('Store Token button click')">Set Token button</button>
 <br /><br />
 <button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
 <br /><br />
+<button onClick="javascript:performNativeAction('blah')">Native Action button</button>
+<br /><br />
+<p id="demo">_</p>  
 </body>
 </html>
