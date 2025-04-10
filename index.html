@@ -2,14 +2,14 @@
   <head>
     <title>My Page Title</title>
     <script>
-    export const JAVASCRIPT_API = "EDJAndroid";
+    const JAVASCRIPT_API = "EDJAndroid";
       
     function showToast(myString) {
       console.log(myString);
       try {
         JAVASCRIPT_API.showToast(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error);
+        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
       }
     }
       
@@ -18,7 +18,7 @@
       try {
         JAVASCRIPT_API.storeToken(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error);
+        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
       }      
     }  
       
@@ -27,7 +27,7 @@
       try {
         JAVASCRIPT_API.retrieveToken(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error);
+        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
       }      
     }   
       
@@ -56,7 +56,7 @@
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness F</h2>
+<h2>Android Webview Interface test harness G</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
