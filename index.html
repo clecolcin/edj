@@ -20,8 +20,10 @@
     function performNativeAction(myString) {
       console.log(myString);
       console.log("calling native...");
-      val retValue = EDJAndroid.performNativeAction(myString);
-      console.log("calling native called");      
+      EDJAndroid.performNativeAction(myString);
+      console.log("calling native called");  
+      val retVal = "x"
+      document.getElementById('random_val').innerHTML = retValue;
     }  
     
     </script>
