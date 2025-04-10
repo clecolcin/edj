@@ -20,14 +20,31 @@
     function performNativeAction(myString) {
       console.log(myString);
       console.log("calling native...");
-     // EDJAndroid.performNativeAction(myString);
+      try {
+         EDJAndroid.performNativeAction(myString);   
+      } catch (error) {
+        console.log("Sad Error: " + error);
+      }
+
       document.getElementById('random_val').innerHTML = "some val";
     }  
+
+    async function fetchData() {
+      try {
+        const response = await EDJAndroid.performNativeAction(myString);
+        const data = await response;
+        document.getElementById('random_val').innerHTML = data;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // Handle the error or return a default value
+        return null;
+      }
+    }      
     
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness C</h2>
+<h2>Android Webview Interface test harness D</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
