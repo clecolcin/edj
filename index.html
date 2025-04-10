@@ -15,8 +15,15 @@
     function retrieveToken(myString) {
       console.log(myString);
       EDJAndroid.retrieveToken(myString)
-    }    
-
+    }   
+      
+    function performNativeAction(myString) {
+      console.log(myString);
+      console.log("calling native...");
+      val retValue = EDJAndroid.performNativeAction(myString)
+      console.log("calling native called");
+      document.getElementById('random_val').innerHTML = retValue
+    }  
     
     </script>
 </head>
@@ -30,8 +37,8 @@
 <br /><br />
 <button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
 <br /><br />
-<button onClick="javascript:performNativeAction('blah')">Native Action button</button>
+<button onClick="javascript:performNativeAction('Perform Native action')">Native Action button</button>
 <br /><br />
-<p id="demo">_</p>  
+<p id="random_val">_</p>  
 </body>
 </html>
