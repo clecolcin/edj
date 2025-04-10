@@ -15,6 +15,12 @@
     function retrieveToken(myString) {
       console.log(myString);
       EDJAndroid.retrieveToken(myString)
+    }    
+
+    function retrieveToken(myString) {
+      console.log(myString + "calling native");
+      val retValue = EDJAndroid.performNativeAction(myString)
+      
     }      
     </script>
 </head>
