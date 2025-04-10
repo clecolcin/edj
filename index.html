@@ -19,13 +19,15 @@
       
     function performNativeAction(myString) {
       console.log(myString);
-     console.log("calling native...");
+      console.log("calling native...");
+      val retValue = EDJAndroid.performNativeAction(myString);
+      console.log("calling native called");      
     }  
     
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness Y</h2>
+<h2>Android Webview Interface test harness Z</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
