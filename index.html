@@ -32,7 +32,7 @@
        document.getElementById('random_val').innerHTML = "some val";
     }   
 
-    async function fetchData(myString) {
+    async function performNativeAction(myString) {
       try {
         const response = await JAVASCRIPT_API.performNativeAction(myString);
         const data = await response;
@@ -45,7 +45,7 @@
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness H</h2>
+<h2>Android Webview Interface test harness I</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
