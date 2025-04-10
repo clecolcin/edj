@@ -28,20 +28,9 @@
         JAVASCRIPT_API.retrieveToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
-      }      
+      } 
+       document.getElementById('random_val').innerHTML = "some val";
     }   
-      
-    function performNativeAction(myString) {
-      console.log(myString);
-      console.log("calling native...");
-      try {
-         JAVASCRIPT_API.performNativeAction(myString);   
-      } catch (error) {
-        console.log("Sad Error: " + error);
-      }
-
-      document.getElementById('random_val').innerHTML = "some val";
-    }  
 
     async function fetchData(myString) {
       try {
@@ -56,7 +45,7 @@
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness G</h2>
+<h2>Android Webview Interface test harness H</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
@@ -64,8 +53,6 @@
 <button onClick="javascript:storeToken('Store Token button click')">Set Token button</button>
 <br /><br />
 <button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
-<br /><br />
-  <button onClick="javascript:fetchData('Fetch')">Fetch button</button>
 <br /><br />
 <button onClick="javascript:performNativeAction('Perform Native action')">Native Action button</button>
 <br /><br />
