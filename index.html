@@ -2,10 +2,12 @@
   <head>
     <title>My Page Title</title>
     <script>
+    const JAVASCRIPT_API = "EDJAndroid";
+      
     function showToast(myString) {
       console.log(myString);
       try {
-        EDJAndroid.showToast(myString);
+        JAVASCRIPT_API.showToast(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       }
@@ -14,7 +16,7 @@
     function storeToken(myString) {
       console.log(myString);
       try {
-        EDJAndroid.storeToken(myString);
+        JAVASCRIPT_API.storeToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       }      
@@ -23,7 +25,7 @@
     function retrieveToken(myString) {
       console.log(myString);
       try {
-        EDJAndroid.retrieveToken(myString);
+        JAVASCRIPT_API.retrieveToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       }      
@@ -33,7 +35,7 @@
       console.log(myString);
       console.log("calling native...");
       try {
-         EDJAndroid.performNativeAction(myString);   
+         JAVASCRIPT_API.performNativeAction(myString);   
       } catch (error) {
         console.log("Sad Error: " + error);
       }
@@ -43,20 +45,18 @@
 
     async function fetchData(myString) {
       try {
-        const response = await EDJAndroid.performNativeAction(myString);
+        const response = await JAVASCRIPT_API.performNativeAction(myString);
         const data = await response;
         document.getElementById('random_val').innerHTML = data;
       } catch (error) {
         console.error("Error fetching data:", error);
-        // Handle the error or return a default value
-        return null;
       }
     }      
     
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness F</h2>
+<h2>Android Webview Interface test harness G</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
