@@ -4,17 +4,29 @@
     <script>
     function showToast(myString) {
       console.log(myString);
-      EDJAndroid.showToast(myString);
+      try {
+        EDJAndroid.showToast(myString);
+      } catch (error) {
+        console.log(myString + " - ERROR : " + error);
+      }
     }
       
     function storeToken(myString) {
       console.log(myString);
-      EDJAndroid.storeToken(myString);
+      try {
+        EDJAndroid.storeToken(myString);
+      } catch (error) {
+        console.log(myString + " - ERROR : " + error);
+      }      
     }  
       
     function retrieveToken(myString) {
       console.log(myString);
-      EDJAndroid.retrieveToken(myString);
+      try {
+        EDJAndroid.retrieveToken(myString);
+      } catch (error) {
+        console.log(myString + " - ERROR : " + error);
+      }      
     }   
       
     function performNativeAction(myString) {
@@ -29,7 +41,7 @@
       document.getElementById('random_val').innerHTML = "some val";
     }  
 
-    async function fetchData() {
+    async function fetchData(myString) {
       try {
         const response = await EDJAndroid.performNativeAction(myString);
         const data = await response;
@@ -44,7 +56,7 @@
     </script>
 </head>
 <body>
-<h2>Android Webview Interface test harness E</h2>
+<h2>Android Webview Interface test harness F</h2>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
@@ -53,7 +65,7 @@
 <br /><br />
 <button onClick="javascript:retrieveToken('Retrieve Token button click')">Retrieve Token button</button>
 <br /><br />
-  <button onClick="javascript:performNativeAction('Fetch')">Fetch button</button>
+  <button onClick="javascript:fetchData('Fetch')">Fetch button</button>
 <br /><br />
 <button onClick="javascript:performNativeAction('Perform Native action')">Native Action button</button>
 <br /><br />
