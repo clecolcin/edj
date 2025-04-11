@@ -2,8 +2,6 @@
   <head>
     <title>Test Harness</title>
     <script>
-    var JAVASCRIPT_API = "EDJAndroid";
-      
     function showToast(myString) {
       console.log(myString);
       try {
@@ -16,7 +14,7 @@
     function storeToken(myString) {
       console.log(myString);
       try {
-        JAVASCRIPT_API.storeToken(myString);
+        EDJAndroid.storeToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
       }      
@@ -25,7 +23,7 @@
     function retrieveToken(myString) {
       console.log(myString);
       try {
-        JAVASCRIPT_API.retrieveToken(myString);
+        EDJAndroid.retrieveToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
       } 
@@ -35,7 +33,7 @@
     function performNativeAction(myString) {
       console.log(myString);
       try {
-        JAVASCRIPT_API.performNativeAction(myString);
+        EDJAndroid.performNativeAction(myString);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -45,7 +43,7 @@
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness C </h3>
+<h3>Android Webview Interface test harness D </h3>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
@@ -57,5 +55,11 @@
 <button onClick="javascript:performNativeAction('Perform Native action')">Native Action button</button>
 <br /><br />
 <p id="random_val">_</p>  
+
+<br /><br />
+<button id="back-btn">Back button</button>
+<br /><br />
+<button id="next-btn">Next button</button>
+
 </body>
 </html>
