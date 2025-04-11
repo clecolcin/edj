@@ -7,7 +7,7 @@
       try {
         EDJAndroid.showToast(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
+        console.log(myString + " - ERROR : " + error);
       }
     }
       
@@ -16,7 +16,7 @@
       try {
         EDJAndroid.storeToken(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
+        console.log(myString + " - ERROR : " + error);
       }      
     }  
       
@@ -25,7 +25,7 @@
       try {
         EDJAndroid.retrieveToken(myString);
       } catch (error) {
-        console.log(myString + " - ERROR : " + error + " ~ " + JAVASCRIPT_API);
+        console.log(myString + " - ERROR : " + error);
       } 
        document.getElementById('random_val').innerHTML = "some val";
     }   
@@ -43,7 +43,7 @@
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness D </h3>
+<h3>Android Webview Interface test harness F </h3>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
