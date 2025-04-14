@@ -32,12 +32,13 @@
 
     function performNativeAction(myString) {
       console.log(myString);
+      val impVal = "waiting..."
       try {
-        EDJAndroid.performNativeAction(myString);
+        impVal = EDJAndroid.performNativeAction(myString);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-        document.getElementById('random_val').innerHTML = data;      
+        document.getElementById('random_val').innerHTML = impVal;      
     }      
     
     </script>
