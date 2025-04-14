@@ -14,11 +14,11 @@
     function storeToken(myString) {
       console.log(myString);
       try {
-        impVal = EDJAndroid.storeToken(myString);
+        EDJAndroid.storeToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       }   
-       document.getElementById('random_val').innerHTML = impVal;
+       document.getElementById('random_val').innerHTML = "Hello Earth";
     }  
       
     function retrieveToken(myString) {
@@ -45,7 +45,7 @@
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness Z</h3>
+<h3>Android Webview Interface test harness Y</h3>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
