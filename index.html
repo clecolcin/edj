@@ -13,11 +13,13 @@
       
     function storeToken(myString) {
       console.log(myString);
+      val impVal = "waiting..."
       try {
-        EDJAndroid.storeToken(myString);
+        imnpVal = EDJAndroid.storeToken(myString);
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
-      }      
+      }   
+       document.getElementById('random_val').innerHTML = "some val";
     }  
       
     function retrieveToken(myString) {
@@ -27,14 +29,13 @@
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       } 
-       document.getElementById('random_val').innerHTML = "some val";
+      
     }   
 
     function performNativeAction(myString) {
       console.log(myString);
-      val impVal = "waiting..."
       try {
-        impVal = EDJAndroid.performNativeAction(myString);
+        EDJAndroid.performNativeAction(myString);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
