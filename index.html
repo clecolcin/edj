@@ -26,15 +26,16 @@
       let impVal = "waiting...";
       try {
         impVal = EDJAndroid.retrieveToken(myString);
+         document.getElementById('random_val').innerHTML = impVal 
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       } 
-      document.getElementById('random_val').innerHTML = impVal   
+       console.log("completed retrieve");
     }   
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness C</h3>
+<h3>Android Webview Interface test harness D</h3>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
