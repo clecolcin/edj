@@ -29,23 +29,12 @@
       } catch (error) {
         console.log(myString + " - ERROR : " + error);
       } 
-      document.getElementById('random_val').innerHTML = impVal;   
+      document.getElementById('random_val').innerHTML = "Attempt";   
     }   
-
-    function performNativeAction(myString) {
-      console.log(myString);
-      try {
-        EDJAndroid.performNativeAction(myString);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-  
-    }      
-    
     </script>
 </head>
 <body>
-<h3>Android Webview Interface test harness Y</h3>
+<h3>Android Webview Interface test harness C</h3>
 
 <p id="title">Choose your action:</p>
 <input type="button" id="input_button" value="Show Toast button" onClick="javascript:showToast('Show Toast button click')" />
